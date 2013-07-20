@@ -91,10 +91,15 @@ background: white;
 	border-bottom: 1px solid #ddd;
 }
 
+.social ul {
+	margin: 0px;
+}
+
 .social-list li {
 	list-style: none;
 	display: inline;
 }
+
 
 .benefits {
 	padding-top: 80px;
