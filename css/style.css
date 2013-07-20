@@ -143,6 +143,14 @@ background: white;
 	margin-bottom: 0px;
 }
 
+.orbit-timer, .orbit-prev, .orbit-next{
+	display: none;
+}
+
+.slideshow-wrapper {
+	padding-top: 50px;
+}
+
 .sidebar {
 	width: 200px;
 }
