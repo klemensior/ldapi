@@ -93,7 +93,7 @@ background: white;
 
 .social-list li {
 	list-style: none;
-	display: block;
+	display: inline;
 }
 
 .benefits {
