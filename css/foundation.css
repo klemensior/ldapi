@@ -1784,7 +1784,7 @@ span.error, small.error {
 .error small.error {
   display: block;
   padding: 0.375em 0.25em;
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 1em;
   font-size: 0.75em;
   font-weight: bold;

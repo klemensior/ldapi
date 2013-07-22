@@ -29,9 +29,13 @@
             <ul class="title-area">
               <!-- Title Area -->
               <li class="name">
-                <h1><a href="#"><i class="icon-comments icon-large"></i> Language Decoder API</a></h1>
+                <h1>
+                  <a href="#">
+                    <i class="icon-comments icon-large"></i> Language Decoder API
+                  </a>
+                </h1>
               </li>
-              <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+              <!-- Menu button for lower resolutions -->
               <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
             </ul>
             <section class="top-bar-section">
@@ -50,7 +54,35 @@
                   <a href="page.html">Demo</a>
                 </li>
                 <li class="has-form">
-                  <a class="button" href="#">Sign In</a>
+                  <a class="button" href="#" data-dropdown="drop">Sign In</a>
+                  <!-- Dropdown -->
+                  <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999;">
+                    <div class="large-12 columns">
+                      <h4>Sign in</h4>
+                    </div>
+                    <form data-abide>
+                      <div class="row sign-in">
+                        <div class="large-12 columns">
+                          <label>Email:</label>
+                          <input type="email" required placeholder="Email">
+                          <small class="error">Proper email address is required.</small>
+                        </div>
+                      </div>
+                      <div class="row sign-in">
+                        <div class="large-12 columns">
+                          <label>Password:</label>
+                          <input type="password" required placeholder="Password">
+                          <small class="error">Enter your password.</small>
+                        </div>
+                      </div>
+                      <div class="row sign-in">
+                        <div class="large-12 columns">
+                          <input class="large button expand" type="submit" value="Sign In">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
                 </li>
               </ul>
             </section>
@@ -63,18 +95,20 @@
         <div class="row">
           <div class="large-8 columns">
             <h1>Convert plain text<br/>into structured data.</h1>
-            <p>Using Language Decoder API you can structurize any kind of english text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
+            <p>Language Decoder is a base technology for applications which heavily rely on coherently structured English texts. This technology opens up the gates to information retrieval from all types of text, ranging from tweets, to user reviews all the way to scientific articles.</p>
           </div>
           <div class="large-4 columns">
-            <form>
+            <form data-abide>
               <div class="row">
                 <div class="large-12 columns">
-                  <input type="text" placeholder="Email">
+                  <input type="email" required placeholder="Email">
+                  <small class="error">Proper email address is required.</small>
                 </div>
               </div>
               <div class="row">
                 <div class="large-12 columns">
-                  <input type="text" placeholder="Password">
+                  <input type="password" required placeholder="Password">
+                  <small class="error">Passwords must be at least 8 characters with 1 capital letter, 1 number, and one special character.</small>
                 </div>
               </div>
               <div class="row">
@@ -99,12 +133,7 @@
         <div class="row">
           <ul class="social-list">
             <li>
-              <iframe src="http://ghbtns.com/github-btn.html?user=fidolabs&amp;type=follow&amp;count=true"
-                allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
-            </li>
-            <li>
-              <iframe src="http://ghbtns.com/github-btn.html?user=fidolabs&amp;repo=api&amp;type=fork&amp;count=true"
-                allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+              <div class="fb-like" data-href="http://www.facebook.com/fido.intelligence.eng" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
             </li>
             <li>
               <a href="https://twitter.com/fidolabs" class="twitter-follow-button" data-show-count="false">Follow @fidolabs</a>
@@ -113,87 +142,98 @@
               </script>
             </li>
             <li>
-              <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="languagedecoder">
+                Tweet
+              </a>
               <script>
                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
               </script>
+            </li>
+            <li>
+              <iframe src="http://ghbtns.com/github-btn.html?user=fidolabs&amp;type=follow&amp;count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe>
+            </li>
+            <li>
+              <iframe src="http://ghbtns.com/github-btn.html?user=fidolabs&amp;repo=api&amp;type=fork&amp;count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
             </li>
           </ul>
         </div>
       </div>
 
+      <!-- Samples slider -->
+      <div class="samples-container">
+        <div class="row samples">
+          <h1>See the possibilities.</h1>
+          <h4 class="subheader">Language Decoder gives you an infinite number of possible implementations.</h4>
+        </div>
+        <div class="slideshow-wrapper">
+          <ul data-orbit>
+            <li>
+              <img alt="" src="img/slide1.jpg" />
+            </li>
+            <li>
+              <img alt="" src="img/slide2.jpg" />
+            </li>
+            <li>
+              <img alt="" src="img/slide3.jpg" />
+            </li>
+          </ul>
+        </div>
+      </div>
       <!-- Benefits -->
       <div class="benefits-container">
         <div class="row benefits">
           <h1>
-          Ultimate NLP technology.</h1>
-          <h4 class="subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar feugiat nisi.</h4>
+          Game Changing NLP Technology.</h1>
+          <h4 class="subheader">Creating new, ground-breaking apps will push the boundary of what is thought possible when working with text.</h4>
+        </div>
+        <div class="row benefits-perticular">
+          <div class="large-4 columns">
+            <i class="icon-code icon-4x"></i>
+            <div>
+              <h3>Purely algorithmic.</h3>
+              <p>Language Decoder does not include machine learning or any statistical approach. The technology underlying Language Decoder’s functioning is novel and revolutionary.</p>
+            </div>
+          </div>
+          <div class="large-4 columns">
+            <i class="icon-sitemap icon-4x"></i>
+            <div>
+              <h3>Rich output.</h3>
+              <p>We provide great amount of information from the level of words to the level of sentences. By combining syntax and semantics, Language Decoder shows relations between words, phrases and clauses.</p>
+            </div>
+          </div>
+          <div class="large-4 columns">
+            <i class="icon-random icon-4x"></i>
+            <div>
+              <h3>Cross platform.</h3>
+              <p>We love JSON for its ease of implementation. Also, creating apps that base on Language Decoder’s output is much faster and more ‘environmentally’ friendly.</p>
+            </div>
+          </div>
         </div>
         <div class="row benefits-perticular">
           <div class="large-4 columns">
             <i class="icon-unlock icon-4x"></i>
             <div>
               <h3>Domain independent.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <i class="icon-money icon-4x"></i>
-            <div>
-              <h3>Free of charge.</h3>
-              <p>Lorem ipsum dolor sit amet, consewitterctetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <i class="icon-sitemap icon-4x"></i>
-            <div>
-              <h3>Rich structure.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row benefits-perticular">
-          <div class="large-4 columns">
-            <i class="icon-random icon-4x"></i>
-            <div>
-              <h3>Cross platform.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
+              <p>Work with any text right from the start. Language Decoder does not discriminate texts, everything from tweets to scientific papers is suitable for LD.</p>
             </div>
           </div>
           <div class="large-4 columns">
             <i class="icon-bullseye icon-4x"></i>
             <div>
               <h3>High accuracy.</h3>
-              <p>Lorem ipsum dolor sit amet, consewitterctetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
+              <p>Language Decoder’s high accuracy comes from many years of evolution and brilliant ideas of brilliant minds.</p>
             </div>
           </div>
           <div class="large-4 columns">
-            <i class="icon-code icon-4x"></i>
+            <i class="icon-money icon-4x"></i>
             <div>
-              <h3>Purely algorithmic.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar feugiat nisi, a sagittis velit tempus eget. Aliquam sit amet tellus velit. Sed non.</p>
+              <h3>Free of charge.</h3>
+              <p>No money? – No problem! We understand that money should not blur the chance of changing the world.</p>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Samples slider -->
-      <div class="row samples">
-        <h1>Check what you can do.</h1>
-        <h4 class="subheader">Language Decoder gives you infinite number of possible implementations.</h4>
-      </div>
-      <div class="row slideshow-wrapper">
-        <ul data-orbit>
-          <li>
-            <img alt="" src="img/slide1.png" />
-          </li>
-          <li>
-            <img alt="" src="img/slide2.png" />
-          </li>
-          <li>
-            <img alt="" src="img/slide3.png" />
-          </li>
-        </ul>
       </div>
 
       <!-- Footer -->
@@ -211,20 +251,34 @@
 
 
       <!-- Final scripts -->
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=264352513616387";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+      </script>
+
       <script>
         document.write('<script src=' +
         ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
         '.js><\/script>')
       </script>
+
       <script src="js/foundation.min.js"></script>
+
       <script>
         $(document).foundation();
       </script>
+
       <script>
           var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
           (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
           g.src='//www.google-analytics.com/ga.js';
           s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>
+
     </body>
   </html>

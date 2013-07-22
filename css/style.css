@@ -6,6 +6,26 @@ body {
 	font-size: 14px;
 }
 
+.error {
+	border-radius: 5px;
+}
+
+.error small.error {
+	background-color: #B11E22;
+}
+
+
+.error input {
+	background-color: white;
+	border: 1px;
+}
+
+.marketing .error input {
+	background-color: white;
+	border: 1px;
+	margin-bottom: 1em;
+}
+
 nav.top-bar {
 	height: 45px;
 	background-color: white;
@@ -42,6 +62,14 @@ background: white;
 	border-radius: 5px;
 	border: none;
 	box-shadow: none;
+}
+
+.sign-in {
+	padding-bottom: 15px;
+}
+
+.sign-in input {
+	border-radius: 5px;
 }
 
 .marketing {
@@ -102,7 +130,7 @@ background: white;
 
 
 .benefits {
-	padding-top: 80px;
+	padding-top: 45px;
 }
 
 .benefits h1, h4 {
@@ -125,8 +153,11 @@ background: white;
 }
 
 .benefits-container {
-	border-bottom: 1px solid #e5e5e5;
 	padding-bottom: 70px;
+}
+
+.samples-container {
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .samples {
@@ -143,7 +174,12 @@ background: white;
 	margin-bottom: 0px;
 }
 
-.orbit-timer, .orbit-prev, .orbit-next{
+.slideshow-wrapper img {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.orbit-timer, .orbit-bullets{
 	display: none;
 }
 
