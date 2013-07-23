@@ -54,6 +54,10 @@ background: white;
 	background-color: white;
 }
 
+.top-bar-section ul li > a:not(.button):hover {
+	color: #72ac3e;
+}
+
 .top-bar-section li a:not(.button) {
 	background-color: white;
 }
@@ -70,6 +74,21 @@ background: white;
 
 .sign-in input {
 	border-radius: 5px;
+}
+
+.content-header {
+	background-color: #72ac3e;
+}
+
+.content-header h1{
+	color: white;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.docs-content h4 {
+	text-align: left;
+	color: #6f6f6f;
 }
 
 .marketing {
@@ -154,6 +173,7 @@ background: white;
 
 .benefits-container {
 	padding-bottom: 70px;
+	text-align: center;
 }
 
 .samples-container {
@@ -191,8 +211,6 @@ background: white;
 .sidebar {
 	width: 200px;
 }
-
-
 	
 
 .footer {
