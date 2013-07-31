@@ -23,7 +23,9 @@
     <![endif]-->
 
       <!-- Navigation -->
-      <div class="row">
+      <div class="fixed">
+        <div class="navigation-pane">
+          <div class="row">
         <div class="large-12 columns">
           <nav class="top-bar">
             <ul class="title-area">
@@ -88,6 +90,8 @@
             </section>
           </nav>
         </div>
+          </div>
+        </div>
       </div>
 
       <!-- Content -->
@@ -107,10 +111,13 @@
               </p>
               <div class="content" data-section-content>
                 <ul class="side-nav">
-                  <li><a href="#">getGraph</a></li>
-                  <li><a href="#">getSimplifiedGraph</a></li>
-                  <li><a href="#">getFullTable</a></li>
-                  <li><a href="#">getFullObject</a></li>
+                  <li><a href="#getToken">getToken</a></li>
+                  <li><a href="#getGraph">getGraph</a></li>
+                  <li><a href="#getUserInfo">getUserInfo</a></li>
+                  <li><a href="#setCallbackUrl">setCallbackUrl</a></li>
+                  <li><a href="#getSimplifiedGraph">getSimplifiedGraph</a></li>
+                  <li><a href="#getFullTable">getFullTable</a></li>
+                  <li><a href="#getFullObject">getFullObject</a></li>
                 </ul>
               </div>
             </section>
@@ -145,18 +152,63 @@
             <h2>How to use LD API</h2>
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris.</h4>
             <hr>
-            <h3 data-magellan-destination="link1">Hello 1</h3>
+            <a name="getGraph"></a>
+            <h3>getGraph()</h3><kbd>HTTP></kbd>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              This is practically the same output as getSimplifiedGraph, with the addition of a words field. This field yields more information about individual phrases such as:
               <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
+            </p>
+            <p>
+            <ul>
+              <li>word_id → position of the word</li>
+              <li>word → the actual word as found in the text</li>
+              <li>word_to_word_connection → shows the connections between words in longer phrases</li>
+              <li>Component → specifies the word's role</li>
+            </ul>
+            </p>
+            <h4>Requested parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>data</td>
+                  <td>string(2000)</td>
+                  <td>Text which you wish to decode</td>
+                </tr>
+                <tr>
+                  <td>token</td>
+                  <td>string(32)</td>
+                  <td>Token returned by getToken method</td>
+                </tr>
+                <tr>
+                  <td>method</td>
+                  <td>'getGraph'</td>
+                  <td>Name of method</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>1</td>
+                  <td>(optional) set callback=1 while using callback-API</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>
               <br/><br/>
               Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br/><br/>
               In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
+              <a name="getSimplifiedGraph"></a>
               <br/><br/>
             </p>
-            <h3 data-magellan-destination="link2">Hello 2</h3>
+            
+            <h3>getSimplifiedGraph()</h3>
             <p>
               Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
               <br/><br/>
@@ -165,9 +217,10 @@
               Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br/><br/>
               In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
+              <a name="getFullTable"></a>
               <br/><br/>
             </p>
-            <h3 data-magellan-destination="link3">Hello 3</h3>
+            <h3>getFullTable()</h3>
             <p>
               Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
               <br/><br/>
@@ -176,9 +229,9 @@
               Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br/><br/>
               In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
+              <a name="getFullObject"></a>
               <br/><br/>
-            </p>
-            <h3 data-magellan-destination="link4">Hello 4</h3>
+            <h3>getFullObject()</h3>
             <p>
               Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
               <br/><br/>
@@ -204,6 +257,26 @@
           </p>
           <p class="footer-disclaimer">© 2013 Fido Labs. All rights reserved.</p>
         </div>
+      </div>
+
+
+      <!-- Modal section -->
+      <div id="myModal" class="reveal-modal">
+        <h2>Awesome. I have it.</h2>
+        <p class="lead">Your couch.  It is mine.</p>
+        <h3>getFullObject()</h3>
+            <p>
+              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              <br/><br/>
+              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
+              <br/><br/>
+              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <br/><br/>
+              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
+              <br/><br/>
+              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>
+            </p>
+        <a class="close-reveal-modal">&#215;</a>
       </div>
 
 
@@ -236,6 +309,5 @@
           g.src='//www.google-analytics.com/ga.js';
           s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>
-
     </body>
   </html>
