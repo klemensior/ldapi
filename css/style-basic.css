@@ -1,0 +1,252 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.text-small {
+	font-size: 14px;
+}
+
+.error {
+	border-radius: 5px;
+}
+
+.error small.error {
+	background-color: #B11E22;
+}
+
+
+.error input {
+	background-color: white;
+	border: 1px;
+}
+
+.marketing .error input {
+	background-color: white;
+	border: 1px;
+	margin-bottom: 1em;
+}
+
+nav.top-bar {
+	height: 45px;
+	background-color: white;
+	margin-bottom: 0px;
+}
+
+.navigation-pane {
+	background-color: white;
+	border-bottom: 1px solid #72ac3e;
+}
+
+.top-bar-section .has-form {
+	background-color: white;
+}
+
+.top-bar .name h1 a {
+	color: black;
+}
+
+.top-bar.expanded .toggle-topbar a span, .top-bar .toggle-topbar.menu-icon a span {
+	-webkit-box-shadow: 0 10px 0 1px #212121, 0 16px 0 1px #212121, 0 22px 0 1px #212121;
+	box-shadow: 0 10px 0 1px #212121, 0 16px 0 1px #212121, 0 22px 0 1px #212121;
+}
+
+.top-bar.expanded .title-area {
+	background: white;
+}
+
+.top-bar-section ul li > a:not(.button) {
+	color: #222222;
+	background-color: white;
+}
+
+.top-bar-section ul li > a:not(.button):hover {
+	color: #72ac3e;
+}
+
+.top-bar-section li a:not(.button) {
+	background-color: white;
+}
+
+.top-bar-section ul li > a.button {
+	border-radius: 5px;
+	border: none;
+	box-shadow: none;
+}
+
+.sign-in {
+	padding-bottom: 15px;
+}
+
+.sign-in input {
+	border-radius: 5px;
+}
+
+.content-header {
+	background-color: #72ac3e;
+}
+
+.content-header h1{
+	color: white;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-top: 45px;
+}
+
+.docs-content h4 {
+	text-align: left;
+	color: #6f6f6f;
+}
+
+.marketing {
+	background: #72ac3e; 
+	/* Zmien dla fixed nav  na 75px*/
+	padding-top: 45px;
+	padding-bottom: 30px;
+}
+
+.marketing h1, .marketing p{
+	text-align: center;
+	color: white;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);	
+}
+
+.marketing h1 {
+	font-size: 60px;
+	line-height: 65px;
+}
+
+.marketing input{
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.marketing input[type="submit"]{
+	font-size: 14px;
+	background: #485044;
+}
+
+.marketing input[type="submit"]:hover{
+	background: #2d3927;
+}
+
+.marketing form {
+	padding-top: 15px;
+}
+
+.social {
+	padding: 22px 0 17px;
+	text-align: center;
+	background-color: #f5f5f5;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+.social ul {
+	margin: 0px;
+}
+
+.social-list li {
+	list-style: none;
+	display: inline;
+}
+
+
+.benefits {
+	padding-top: 45px;
+}
+
+.benefits h1, h4 {
+	font-weight: normal;
+	text-align: center;
+}
+
+.benefits h1 {
+	font-size: 42px;
+	margin-bottom: 0px;
+}
+
+.benefits-perticular {
+	padding-top: 50px;
+	text-align: center;
+}
+
+.benefits-perticular p {	
+	color: #5a5a5a;
+}
+
+.benefits-container {
+	padding-bottom: 70px;
+	text-align: center;
+}
+
+.samples-container {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.samples {
+	padding-top: 60px;
+}
+
+.samples h1, h4 {
+	font-weight: normal;
+	text-align: center;
+}
+
+.samples h1 {
+	font-size: 42px;
+	margin-bottom: 0px;
+}
+
+.slideshow-wrapper img {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.orbit-timer, .orbit-bullets{
+	display: none;
+}
+
+.slideshow-wrapper {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.sidebar {
+	width: 200px;
+}
+	
+
+.footer {
+	text-align: center;
+	background-color: #f5f5f5;
+	border-top: 1px solid #e5e5e5;
+	color: #aeaeae;
+}
+
+.footer a {
+	color: #aeaeae;
+	font-weight: bold;
+}
+
+.footer-content {
+	padding: 30px;
+}
+
+.footer-links {
+	padding-bottom: 0px;
+	margin-bottom: 2px;
+}
+
+.footer-logo {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+}
+
+.footer-disclaimer {
+	padding-bottom: 0px;
+}
