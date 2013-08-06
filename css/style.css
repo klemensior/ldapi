@@ -99,9 +99,9 @@ nav.top-bar {
 
 .marketing {
 	background: #72ac3e; 
-	padding-top: 75px;
+	/* Zmien dla fixed nav */
+	padding-top: 45px;
 	padding-bottom: 30px;
-
 }
 
 .marketing h1, .marketing p{
