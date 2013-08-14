@@ -15,6 +15,8 @@
       <link rel="stylesheet" href="css/foundation.css">
       <link rel="stylesheet" href="css/style-basic.css">
       <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+<!--       <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'> -->
+      <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
       <script src="js/vendor/custom.modernizr.js"></script>
     </head>
     <body>
@@ -44,10 +46,13 @@
                   <!-- Right Nav Section -->
                   <ul class="right">
                     <li>
-                      <a href="#">About us</a>
+                      <a href="#">Scientists</a>
                     </li>
                     <li>
-                      <a href="#">Our mission</a>
+                      <a href="#">Developers</a>
+                    </li>
+                    <li>
+                      <a href="basic-team.html">Team</a>
                     </li>
                   </ul>
                 </section>
@@ -61,7 +66,7 @@
         <div class="row">
           <div class="large-12 columns">
             <h1>Convert plain text</br>into structured data</h1>
-            <p>Language Decoder is a base technology for applications which heavily rely on coherently structured English texts. This technology opens up the gates to information retrieval from all types of text, ranging from tweets, to user reviews all the way to scientific articles.</p>
+            <p>Language Decoder is a base technology that deciphers logical structure from text based on its grammar. Retrieve meaningful information from all types of English texts, ranging from tweets, to user reviews all the way to scientific articles.</p>
           </div>
         </div>
         <div>
@@ -130,6 +135,8 @@
           </ul>
         </div>
       </div>
+
+
       <!-- Benefits -->
       <div class="benefits-container">
         <div class="row benefits">
@@ -187,6 +194,20 @@
       </div>
 
 
+      <!-- Hiring -->
+      <div class="hiring">
+        <div class="row hiring-content">
+          <h1>Fido Labs is hiring!</h1>
+          <h4 class="subheader">We're looking for <b>engineers</b>, <b>linguists</b> and <b>designers</b> to join our growing team.</h4>
+          <div>
+          <div class="row">
+            <div class="small-12 small-centered columns text-center">
+              <input class="large button" type="submit" data-reveal-id="#" value="See open positions">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
 
       <!-- Footer -->
       <div class="footer">
@@ -207,25 +228,32 @@
       <!-- Modal -->
 
       <div id="get-access" class="reveal-modal small">
-        <div class="row">
+        <div class="row collapse">
           <div class="large-12 columns">
+            <h1><i class="icon-cogs icon-3x"></i></h1>
             <h1>We're working on it!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum eros et felis iaculis gravida. Ut eleifend cursus leo. Proin commodo pulvinar vestibulum. Cras vel gravida massa. Curabitur ut leo sed justo tincidunt vehicula ac a nibh. Aenean justo sem, vulputate sit amet egestas ac, gravida sed justo.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum eros et felis iaculis gravida. Ut eleifend cursus leo.</p>
             <p>Something here...</p>
-            <h5>Leave us your email.</h5>
+            <h5>Leave us your email</h5>
           </div>
         </div>
         
         <form data-abide>
-          <div class="row">
+<!--           <div class="row">
             <div class="large-12 columns">
               <input type="email" required placeholder="Email">
               <small class="error">Proper email address is required.</small>
             </div>
-          </div>
-          <div class="row">
-            <div class="small-12 small-centered columns text-center">
-              <input class="small button" type="submit" value="Submit">
+          </div> -->
+          <div class="row collapse">
+            <div class="small-1 large-1 columns">
+              <span class="prefix">@</span> <!-- <i class="icon-envelope"></i> -->
+            </div>
+            <div class="small-9 large-9 columns">
+              <input type="text" placeholder="Enter your email">
+            </div>
+            <div class="small-2 large-2 columns">
+              <a href="#" class="button prefix">Submit</a>
             </div>
           </div>
         </form>
