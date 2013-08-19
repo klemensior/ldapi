@@ -233,8 +233,9 @@ nav.top-bar {
 }
 	
 .hiring {
-/*	background: #72ac3e;*/
-background: url(../img/hiring_bg.jpg) center center no-repeat;
+	margin-top: 70px;
+	background: #72ac3e;
+	/*background: url(../img/hiring_bg.jpg) center center no-repeat;*/
 }
 
 .hiring h1, h4 {
@@ -272,6 +273,24 @@ background: url(../img/hiring_bg.jpg) center center no-repeat;
 }
 
 .hiring input[type="submit"]:hover{
+	background: #2d3927;
+}
+
+.access-button input{
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.access-button input[type="submit"]{
+	font-size: 14px;
+	background: #485044;
+}
+
+.access-button input[type="submit"]:hover{
 	background: #2d3927;
 }
 
