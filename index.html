@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -15,6 +16,8 @@
       <link rel="stylesheet" href="css/foundation.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+      <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
       <script src="js/vendor/custom.modernizr.js"></script>
     </head>
     <body>
@@ -50,15 +53,21 @@
                       <a href="docs.html">Documentation</a>
                     </li>
                     <li>
-                      <a href="cases.html">Samples</a>
+                      <a href="samples.html">Samples</a>
                     </li>
                     <li>
                       <a href="demo.html">Demo</a>
                     </li>
+                    <li>
+                      <a href="stats.html">Statistics</a>
+                    </li>
+                    <li>
+                      <a href="account.html">Account</a>
+                    </li>
                     <li class="has-form">
-                      <a class="button" href="#" data-dropdown="drop">Sign In</a>
+                      <a class="button" href="#" data-dropdown="drop">Sign In</a> <!-- Sign out po zalogowaniu -->
                       <!-- Dropdown -->
-                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999;">
+                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999 !important;">
                         <div class="large-12 columns">
                           <h4>Sign in</h4>
                         </div>
@@ -244,14 +253,17 @@
 
       <!-- Footer -->
       <div class="footer">
-        <div class="row footer-content">
-          <p class="footer-links">
-            <a href="#">About us</a> · 
-            <a href="#">Wiki</a><img class="footer-logo" alt="" src="img/fidolabs-logo.png">
-            <a href="#">Privacy</a> · 
-            <a href="#">Contact</a>
-          </p>
-          <p class="footer-disclaimer">© 2013 Fido Labs. All rights reserved.</p>
+        <div class="row">
+          <div class="footer-content large-12 columns small-centered">
+            <ul class="inline-list footer-links">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Wiki</a></li>
+              <li><img class="footer-logo" alt="" src="img/fidolabs-logo.png"></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <p class="footer-disclaimer">© 2013 Fido Labs. All rights reserved.</p>
+          </div>
         </div>
       </div>
 
