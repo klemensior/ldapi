@@ -17,6 +17,8 @@
       <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
       <link rel="stylesheet" href="css/shCore.css"/>
       <link rel="stylesheet" href="css/shThemeDefault.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
 
       <script src="js/vendor/custom.modernizr.js"></script>
       <script src="js/shCore.js"></script>
@@ -38,7 +40,7 @@
                   <!-- Title Area -->
                   <li class="name">
                     <h1>
-                      <a href="./">
+                      <a href="#">
                         <i class="icon-comments icon-large"></i> Language Decoder API
                       </a>
                     </h1>
@@ -56,15 +58,21 @@
                       <a href="docs.html">Documentation</a>
                     </li>
                     <li>
-                      <a href="cases.html">Samples</a>
+                      <a href="samples.html">Samples</a>
                     </li>
                     <li>
                       <a href="demo.html">Demo</a>
                     </li>
+                    <li>
+                      <a href="stats.html">Statistics</a>
+                    </li>
+                    <li>
+                      <a href="account.html">Account</a>
+                    </li>
                     <li class="has-form">
-                      <a class="button" href="#" data-dropdown="drop">Sign In</a>
+                      <a class="button" href="#" data-dropdown="drop">Sign In</a> <!-- Sign out po zalogowaniu -->
                       <!-- Dropdown -->
-                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999;">
+                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999 !important;">
                         <div class="large-12 columns">
                           <h4>Sign in</h4>
                         </div>
@@ -72,7 +80,7 @@
                           <div class="row sign-in">
                             <div class="large-12 columns">
                               <label>Email:</label>
-                             < input type="email" required placeholder="Email">
+                              <input type="email" required placeholder="Email">
                               <small class="error">Proper email address is required.</small>
                             </div>
                           </div>
@@ -90,6 +98,7 @@
                           </div>
                         </form>
                       </div>
+
                     </li>
                   </ul>
                 </section>
@@ -118,7 +127,6 @@
                 <ul class="side-nav">
                   <li><a href="#">Authorization</a></li>
                   <li><a href="#">CURL samples</a></li>
-                  <li><a href="#">Realtime sample</a></li>
                   <li><a href="#">Callback sample</a></li>
                 </ul>
               </div>
@@ -131,7 +139,6 @@
                 <ul class="side-nav">
                   <li><a href="#">Opinion extraction</a></li>
                   <li><a href="#">Text summarization</a></li>
-                  <li><a href="#">Text to table</a></li>
                 </ul>
               </div>
             </section>
@@ -139,10 +146,11 @@
         </div>
         <div class="large-9 columns">
           <div class="row docs-content">
-            <h2>Check out some cool use cases</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris.</h4>
+            <h2>Ready for use code snippets</h2>
+            <h4>Optimize your work or get an inspiration for an app. Check out some exemplary use cases and code snippets for applications in PHP5.</h4>
             <hr>
-            <h3 data-magellan-destination="link1">Authorization</h3>
+
+            <h3>Authorization</h3>
             <p>
               Before sending the query to LD API, you must perform an authorization by generating a token. To generate a token, run the getToken method. An active account, a login and a password provided in the registration process are required at this stage.
             </p>
@@ -162,40 +170,251 @@
               }
             </pre>
             <hr>
-            <h3 data-magellan-destination="link2">Hello 2</h3>
+            
+            <h3>CURL samples</h3>
             <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dign!!!!!!!!!!!!issim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <br/><br/>
+              Before sending the query to LD API, you must perform an authorization by generating a token. To generate a token, run the getToken method. An active account, a login and a password provided in the registration process are required at this stage.
             </p>
-            <h3 data-magellan-destination="link3">Hello 3</h3>
+            <div class="section-container auto" data-section>
+              <section>
+                <p class="title" data-section-title><a href="#panel1">getToken</a></p>
+                <div class="content" data-section-content>
+                  <pre style="white-space: pre-wrap;">curl -d login=username -d passwd=MD5_encoded_password -d method=getToken https://api.fidolabs.org/v1/</pre>
+                </div>
+              </section>
+              <section>
+                <p class="title" data-section-title><a href="#panel2">getUserInfo</a></p>
+                <div class="content" data-section-content>
+                  <pre style="white-space: pre-wrap;">curl -d login=username -d passwd=MD5_encoded_password -d method=getUserInfo https://api.fidolabs.org/v1/</pre>
+                </div>
+              </section>
+              <section>
+                <p class="title" data-section-title><a href="#panel2">setCallbackUrl</a></p>
+                <div class="content" data-section-content>
+                  <pre style="white-space: pre-wrap;">curl -d login=username -d passwd=MD5_encoded_password -d callback_url=http://my_calalback_url -d method=setCallbackUrl https://api.fidolabs.org/v1/</pre>
+                </div>
+              </section>
+              <section>
+                <p class="title" data-section-title><a href="#panel2">getGraph</a></p>
+                <div class="content" data-section-content>
+                  <pre style="white-space: pre-wrap;">curl -d token=MD5_encoded_token_with_passwd -d data=test -d method=getGraph http://api.fidolabs.org/v1/</pre>
+                </div>
+              </section>
+            </div>
+            <hr>
+
+            <h3>Callback sample</h3>
             <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <br/><br/>
+              This is an instance of a background usage - work with an API, while all of your results will be saved to a defined text file.
             </p>
-            <h3 data-magellan-destination="link4">Hello 4</h3>
+            <pre  class="brush: php">
+              /**
+               * callback.php - sample callback,
+               * saves result (JSON) as textfile
+               * (filename = task_Id)
+               */
+
+              header('Content-Type: application/json; charset=utf-8; Content-Encoding: gzip; Content-Transfer-Encoding: binary');
+
+              if (isset($_POST['result'])) {
+                  
+                  //required by method setCallbackUrl for url validation:
+                  if ($_POST['result']=='verification') {
+                      echo 'ok';
+                  }
+                  //save results to file:
+                  //(filename = task_Id)
+                  else {
+                      $result = json_decode($_POST['result']);
+                      if (isset($result->Id)) {
+                          $outFile   = fopen($result->Id, 'w') or die("can't open file");
+
+                          //results:
+                          fwrite($outFile,$_POST['result']);
+
+                          fclose($outFile);
+                      }
+                  }
+              }
+            </pre>
+            <hr>
+            
+            <h3>Opinion extraction</h3>
             <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <br/><br/>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>
+              Opinion extraction is one of the use cases that will give you a general idea of what can you build on top of Language Decoder. This is a tool used to extract sentiment, or emotions, opinions from any text. Ranging from happiness to usability, sentiment analysis provides developers with a tool which serves as an additional layer on top of a well-structured text. 
             </p>
+            <pre  class="brush: php">
+              require_once 'LdConnect.php';
+
+              $username = 'username';
+              $password = md5('password');
+              $text = 'I loved this phone. This phone is the best. This phone sucks!';
+
+              try {
+                  
+                  $Api = new LdConnect($username, $password);
+
+                  //using realtime-api:
+                  $Api->hasCallback(false);
+
+                  //generate token:
+                  $Api->logIn();
+
+                  //set text:
+                  $Api->setText($text);
+                  
+                  //get results:
+                  $result = $Api->getGraph('array');
+                  
+                  //find sentiment in results:
+                  print_r(getSentiment($result['Result']));
+              }
+              catch (Exception $error) {
+                  print $error->getMessage();
+              }
+
+              function getSentiment($data_) {
+                  if (empty($data_)) {return false;}
+                  $sentiments_ = array();
+
+                  $complements_ = array("good"=>1, "great"=>1, "nice"=>1, "fancy"=>1,
+                      "awesome"=>1, "perfect"=>1, "flawless"=>1, "excellent"=>1,
+                      "exceptional"=>1, "fine"=>1, "superb"=>1);
+
+                  $likeVerbs_ = array("recommend"=>1, "approve"=>1, "endorse"=>1,
+                      "commend"=>1, "praise"=>1, "like"=>1, "love"=>1,
+                      "enjoy"=>1, "appreciate"=>1, "dig"=>1);
+
+                  foreach ($data_ as $key => $phrase) {
+                      $master = $phrase['connected_to'];
+
+                      // rule #1: subject->predicate (e.g. 'My phone rocks!')
+                      if (($phrase['type']=='subject')
+                             && ($master>0)
+                             && ($data_[$master]['type']=='predicate-main')
+                             && (($data_[$master]['base']=='suck')
+                                     || ($data_[$master]['base']=='rock'))) {
+
+                         $sentiments_[] = array(
+                             $key => $phrase['phrase'],
+                             $master => $data_[$master]['phrase']);
+                         continue;
+                      }
+
+                      // rule #2: complement->subject (e.g. This phone is the best)
+                      if (($phrase['type']=='complement')
+                             && ($master>0)
+                             && ($data_[$master]['type']=='subject')
+                             && (isset($complements_[$phrase['base']]))) {
+                             
+                          $sentiments_[] = array(
+                              $key => $phrase['phrase'],
+                              $master => $data_[$master]['phrase']);
+                          continue;
+                      }
+
+                      // rule #3: object->predicate (e.g. Love this phone)
+                      if (($phrase['type']=='object')
+                             && ($master>0)
+                             && (strpos($data_[$master]['type'],'predicate')!==false)
+                             && (isset($likeVerbs_[$data_[$master]['base']]))) {
+
+                          $sentiments_[] = array(
+                              $key => $phrase['phrase'],
+                              $master => $data_[$master]['phrase']);
+                          continue;
+                      }
+                  }
+
+                  if (!empty($sentiments_)) {
+                      $results_ = array();
+                      foreach ($sentiments_ as $id => $sentiment) {
+                          ksort($sentiment);
+                          $string = '';
+                          foreach ($sentiment as $elem) {
+                              $string .= $elem.' ';
+                          }
+                          $results_[] = trim($string);
+                      }
+                  }
+
+                  return $results_;
+              }
+            </pre>
+            <hr>
+
+            <h3>Summarization</h3>
+            <p>
+              Code below enables you to create a tool for text summarization - it's just one of many instances of what can you remove from text. Leave the core meaning that is most valuable for you.
+            </p>
+            <pre  class="brush: php">
+              require_once 'LdConnect.php';
+ 
+              $username = 'username';
+              $password = md5('password');
+              $text = 'Opinion extraction is one of the use cases that will give you a general idea of what can you build on top of Language Decoder. This is a tool used to extract sentiment, or emotions, opinions from any text.';
+               
+              try {
+                   
+                  $Api = new LdConnect($username, $password);
+               
+                  //using realtime-api:
+                  $Api->hasCallback(false);
+               
+                  //generate token:
+                  $Api->logIn();
+               
+                  //set text:
+                  $Api->setText($text);
+                   
+                  //get results:
+                  $result = $Api->getGraph('array');
+                   
+                  //find sentiment in results:
+                  print_r(simpleSummarization($result['Result']));
+              }
+              catch (Exception $error) {
+                  print $error->getMessage();
+              }
+
+              function simpleSummarization($phrases) {
+                foreach ($phrases as $phraseKey => $phraseVal) {
+                    switch ($phraseVal['type']) {
+                        case 'object':
+                        case 'subject':
+                        case 'complement':
+                            foreach ($phraseVal['words'] as $wordKey => $wordVal) {
+                                switch ($wordVal['component']) {
+                                    case 'core':
+                                    case 'specifier':
+                                    case 'negator':
+                                        break;
+                                    default:
+                                        unset($phrases[$phraseKey]['words'][$wordKey]);
+                                        break;
+                                }
+                            }
+                            break;
+                        case (preg_match('/^predicate([-]{1}\S+)?$/', $phraseVal['type']) ? true : false):
+                            break;
+                        default:
+                            unset($phrases[$phraseKey]);
+                            break;
+                    }
+                }
+
+                $outputString = '';
+                foreach ($phrases as $phraseVal) {
+                    foreach ($phraseVal['words'] as $wordVal) {
+                        $outputString .= $wordVal['word'] . ' ';
+                    }
+                }
+                return rtrim($outputString);
+            }
+
+            </pre>
+            <hr>
+
           </div>
         </div>
       </div>
@@ -247,5 +466,6 @@
       <script type="text/javascript">
            SyntaxHighlighter.all()
       </script>
+      
     </body>
   </html>

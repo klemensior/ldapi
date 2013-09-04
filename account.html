@@ -15,7 +15,14 @@
       <link rel="stylesheet" href="css/foundation.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="css/shCore.css"/>
+      <link rel="stylesheet" href="css/shThemeDefault.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
       <script src="js/vendor/custom.modernizr.js"></script>
+      <script src="js/shCore.js"></script>
+      <script src="js/shBrushPhp.js"></script>
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -32,7 +39,7 @@
                   <!-- Title Area -->
                   <li class="name">
                     <h1>
-                      <a href="./">
+                      <a href="#">
                         <i class="icon-comments icon-large"></i> Language Decoder API
                       </a>
                     </h1>
@@ -50,15 +57,21 @@
                       <a href="docs.html">Documentation</a>
                     </li>
                     <li>
-                      <a href="cases.html">Samples</a>
+                      <a href="samples.html">Samples</a>
                     </li>
                     <li>
                       <a href="demo.html">Demo</a>
                     </li>
+                    <li>
+                      <a href="stats.html">Statistics</a>
+                    </li>
+                    <li>
+                      <a href="account.html">Account</a>
+                    </li>
                     <li class="has-form">
-                      <a class="button" href="#" data-dropdown="drop">Sign In</a>
+                      <a class="button" href="#" data-dropdown="drop">Sign In</a> <!-- Sign out po zalogowaniu -->
                       <!-- Dropdown -->
-                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999;">
+                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999 !important;">
                         <div class="large-12 columns">
                           <h4>Sign in</h4>
                         </div>
@@ -84,6 +97,7 @@
                           </div>
                         </form>
                       </div>
+
                     </li>
                   </ul>
                 </section>
@@ -123,10 +137,10 @@
         </div>
         <div class="large-9 columns">
           <div class="row docs-content">
-            <h2>Look up your progress</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet.</h4>
+            <h2>Your private vault</h2>
+            <h4>Manage your account settings.</h4>
             <hr>
-            <h3>General statistics</h3>
+            <h3>Information</h3>
             <table>
               <thead>
                 <tr>
@@ -149,64 +163,51 @@
             </table>
             <hr>
 
-            <h3>Filter statistics</h3>
-            <form>  
-              <div class="row">
-                <div class="large-2 columns">
-                  <label>Year</label>
+            <h3>Output configuration</h3>
+            <div class="row">
+              <form>
+                <div class="large-12 columns">
+                  <label>Callback URL</label>
+                  <input type="text" placeholder="Callback URL">
+                </div>
+                <div class="large-12 columns">
+                  <label>
+                    <span data-tooltip class="has-tip tip-top" title="<p>Select <strong>callback</strong> if you want to receive results on a predefined url address.</p>
+                  <p>Select <strong>realtime</strong> if you want to receive results directly from the request.</p>">Output method</span></label>
                   <select class="medium">
-                    <option>2013</option>
-                    <option>2014</option>
+                    <option>Realtime</option>
+                    <option>Callback</option>
                   </select>
                 </div>
-                <div class="large-4 columns">
-                  <label>Month</label>
-                  <select class="medium">
-                    <option>January</option>
-                    <option>February</option>
-                  </select>
+                <div class="large-12 columns">
+                  <a href="#" type="sumbmit" class="button small">Configure</a>
                 </div>
-                <div class="large-2 columns">
-                    <label>Day</label>
-                    <select class="medium">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                </div>
-                <div class="large-4 columns">
-                  <a href="#" class="button secondary">Today</a>
-                  <a href="#" class="button">Filter</a>
-                </div>
+              </form>
+            </div>
+            <hr>
+
+            <h3>Password change</h3>
+            <div class="row">
+              <form>
+              <div class="large-12 columns">
+                <label>Current password</label>
+                <input type="text" placeholder="Current password">
               </div>
-            </form>
-            <h3 class="subheader">2013</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td>tutaj wygenerowana tabelka</td>
-                </tr>
-              </tbody>
-            </table>
-            <h3 class="subheader">September 2013</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td>tutaj wygenerowana tabelka</td>
-                </tr>
-              </tbody>
-            </table>
-            <h3 class="subheader">September 3, 2013</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td>tutaj wygenerowana tabelka</td>
-                </tr>
-              </tbody>
-            </table>
+              <div class="large-12 columns">
+                <label>New password</label>
+                <input type="text" placeholder="New password">
+              </div>
+              <div class="large-12 columns">
+                <label>Re-type new password</label>
+                <input type="text" placeholder="New password">
+              </div>
+              <div class="large-12 columns">
+                <a href="#" type="sumbmit" class="button small">Change password</a>
+              </div>
+              
+              </form>
+            </div>
+            <hr>
           </div>
         </div>
       </div>
@@ -253,6 +254,11 @@
           g.src='//www.google-analytics.com/ga.js';
           s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>
+      <!-- Syntax Highliter -->
 
+      <script type="text/javascript">
+           SyntaxHighlighter.all()
+      </script>
+      
     </body>
   </html>

@@ -209,6 +209,18 @@ nav.top-bar {
 	margin-bottom: 0px;
 }
 
+#demo-input {
+	height: 200px;
+}
+
+.colored {
+	color: #72ac3e !important;
+}
+
+.output-description td {
+	border: 1px solid #DDDDDD;
+}
+
 .slideshow-wrapper img {
 	margin-left:auto;
 	margin-right:auto;

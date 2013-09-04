@@ -15,7 +15,14 @@
       <link rel="stylesheet" href="css/foundation.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="css/shCore.css"/>
+      <link rel="stylesheet" href="css/shThemeDefault.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
       <script src="js/vendor/custom.modernizr.js"></script>
+      <script src="js/shCore.js"></script>
+      <script src="js/shBrushPhp.js"></script>
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -26,70 +33,76 @@
       <div class="fixed">
         <div class="navigation-pane">
           <div class="row">
-        <div class="large-12 columns">
-          <nav class="top-bar">
-            <ul class="title-area">
-              <!-- Title Area -->
-              <li class="name">
-                <h1>
-                  <a href="./">
-                    <i class="icon-comments icon-large"></i> Language Decoder API
-                  </a>
-                </h1>
-              </li>
-              <!-- Menu button for lower resolutions -->
-              <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-            </ul>
-            <section class="top-bar-section">
-              <!-- Right Nav Section -->
-              <ul class="right">
-                <li>
-                  <a href="start.html">Getting started</a>
-                </li>
-                <li>
-                  <a href="docs.html">Documentation</a>
-                </li>
-                <li>
-                  <a href="cases.html">Samples</a>
-                </li>
-                <li>
-                  <a href="demo.html">Demo</a>
-                </li>
-                <li class="has-form">
-                  <a class="button" href="#" data-dropdown="drop">Sign In</a>
-                  <!-- Dropdown -->
-                  <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999;">
-                    <div class="large-12 columns">
-                      <h4>Sign in</h4>
-                    </div>
-                    <form data-abide>
-                      <div class="row sign-in">
+            <div class="large-12 columns">
+              <nav class="top-bar">
+                <ul class="title-area">
+                  <!-- Title Area -->
+                  <li class="name">
+                    <h1>
+                      <a href="index.html">
+                        <i class="icon-comments icon-large"></i> Language Decoder API
+                      </a>
+                    </h1>
+                  </li>
+                  <!-- Menu button for lower resolutions -->
+                  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                </ul>
+                <section class="top-bar-section">
+                  <!-- Right Nav Section -->
+                  <ul class="right">
+                    <li>
+                      <a href="start.html">Getting started</a>
+                    </li>
+                    <li>
+                      <a href="docs.html">Documentation</a>
+                    </li>
+                    <li>
+                      <a href="samples.html">Samples</a>
+                    </li>
+                    <li>
+                      <a href="demo.html">Demo</a>
+                    </li>
+                    <li>
+                      <a href="stats.html">Statistics</a>
+                    </li>
+                    <li>
+                      <a href="account.html">Account</a>
+                    </li>
+                    <li class="has-form">
+                      <a class="button" href="#" data-dropdown="drop">Sign In</a> <!-- Sign out po zalogowaniu -->
+                      <!-- Dropdown -->
+                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999 !important;">
                         <div class="large-12 columns">
-                          <label>Email:</label>
-                          <input type="email" required placeholder="Email">
-                          <small class="error">Proper email address is required.</small>
+                          <h4>Sign in</h4>
                         </div>
+                        <form data-abide>
+                          <div class="row sign-in">
+                            <div class="large-12 columns">
+                              <label>Email:</label>
+                              <input type="email" required placeholder="Email">
+                              <small class="error">Proper email address is required.</small>
+                            </div>
+                          </div>
+                          <div class="row sign-in">
+                            <div class="large-12 columns">
+                              <label>Password:</label>
+                              <input type="password" required placeholder="Password">
+                              <small class="error">Enter your password.</small>
+                            </div>
+                          </div>
+                          <div class="row sign-in">
+                            <div class="large-12 columns">
+                              <input class="large button expand" type="submit" value="Sign In">
+                            </div>
+                          </div>
+                        </form>
                       </div>
-                      <div class="row sign-in">
-                        <div class="large-12 columns">
-                          <label>Password:</label>
-                          <input type="password" required placeholder="Password">
-                          <small class="error">Enter your password.</small>
-                        </div>
-                      </div>
-                      <div class="row sign-in">
-                        <div class="large-12 columns">
-                          <input class="large button expand" type="submit" value="Sign In">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
 
-                </li>
-              </ul>
-            </section>
-          </nav>
-        </div>
+                    </li>
+                  </ul>
+                </section>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -107,15 +120,15 @@
           <div class="section-container accordion" data-section="accordion">
             <section>
               <p class="title" data-section-title>
-                <a href="#">Methods</a>
+                <a href="#methods">Methods</a>
               </p>
               <div class="content" data-section-content>
                 <ul class="side-nav">
                   <li><a href="#getToken">getToken</a></li>
-                  <li><a href="#getGraph">getGraph</a></li>
                   <li><a href="#getUserInfo">getUserInfo</a></li>
                   <li><a href="#setCallbackUrl">setCallbackUrl</a></li>
                   <li><a href="#getSimplifiedGraph">getSimplifiedGraph</a></li>
+                  <li><a href="#getGraph">getGraph</a></li>
                   <li><a href="#getFullTable">getFullTable</a></li>
                   <li><a href="#getFullObject">getFullObject</a></li>
                 </ul>
@@ -123,25 +136,19 @@
             </section>
             <section>
               <p class="title">
-                <a href="#">Limitations</a>
+                <a href="#limitations">Limitations</a>
               </p>
-              <div class="content">
-                <ul class="side-nav">
-                  <li><a href="#">Input limitations</a></li>
-                  <li><a href="#">User limitations</a></li>
-                </ul>
-              </div>
             </section>
             <section>
               <p class="title">
-                <a href="#">Output description</a>
+                <a href="#output">Output description</a>
               </p>
               <div class="content">
                 <ul class="side-nav">
-                  <li><a href="#">Word fields</a></li>
-                  <li><a href="#">Phrase fields</a></li>
-                  <li><a href="#">Clause fields</a></li>
-                  <li><a href="#">Connection fields</a></li>
+                  <li><a href="#word">Word fields</a></li>
+                  <li><a href="#phrase">Phrase fields</a></li>
+                  <li><a href="#clause">Clause fields</a></li>
+                  <li><a href="#connection">Connection fields</a></li>
                 </ul>
               </div>
             </section>
@@ -149,22 +156,38 @@
         </div>
         <div class="large-9 columns">
           <div class="row docs-content">
+            <div class="large-12 columns">
             <h2>How to use LD API</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris.</h4>
+            <h4>Find detailed information about the methods you can receive, the differences between and the manuals that go with them. It might be your crib anytime you need to find something about particular method, an output or an error code.</h4>
+
+            <a name="methods"></a>
             <hr>
-            <a name="getGraph"></a>
-            <h3>getGraph()</h3><kbd>HTTP></kbd>
+            <h3>Methods</h3>
+            <p>The three <kbd>HTTPS</kbd> methods below return personal data. Click on each, to see what type of data is returned.</p>
+            <div class="large-12 columns">
+              <ul class="square">
+                <li><a href="#getToken">getToken</a></li>
+                <li><a href="#getUserInfo">getUserInfo</a></li>
+                <li><a href="#setCallbackUrl">setCallbackUrl</a></li>
+              </ul>
+            </div>
+
+            <p>The four <kbd>HTTP</kbd> methods below return a json output of a text after analysis. Click on each to see the differences between them.</p>
+            <div class="large-12 columns">
+              <ul class="square">
+                <li><a href="#getSimplifiedGraph">getSimplifiedGraph</a></li>
+                <li><a href="#getGraph">getGraph</a></li>
+                <li><a href="#getFullTable">getFullTable</a></li>
+                <li><a href="#getFullObject">getFullObject</a></li>
+              </ul>
+            </div>
+            <p>Each of the above methods returns a different set of data, with respect to structure and quantity of available fields. <a href="#">Here</a> is a list of all the fields which are returned regardless of a chosen method.</p>
+            <a name="getToken"></a>
+            <hr>
+
+            <kbd class="pull-right">HTTPS</kbd><h3>getToken()</h3>
             <p>
-              This is practically the same output as getSimplifiedGraph, with the addition of a words field. This field yields more information about individual phrases such as:
-              <br/><br/>
-            </p>
-            <p>
-            <ul>
-              <li>word_id → position of the word</li>
-              <li>word → the actual word as found in the text</li>
-              <li>word_to_word_connection → shows the connections between words in longer phrases</li>
-              <li>Component → specifies the word's role</li>
-            </ul>
+              This method returns a user token which is used to authorize requests. Once a username and password have been submitted, the potential user is given a unique token and the process of text processing can begin.
             </p>
             <h4>Requested parameters:</h4>
             <table>
@@ -177,72 +200,1432 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>data</td>
-                  <td>string(2000)</td>
-                  <td>Text which you wish to decode</td>
+                  <td class="colored">login</td>
+                  <td>string</td>
+                  <td>User login</td>
                 </tr>
                 <tr>
-                  <td>token</td>
-                  <td>string(32)</td>
-                  <td>Token returned by getToken method</td>
+                  <td class="colored">passwd</td>
+                  <td>string</td>
+                  <td>User password</td>
                 </tr>
                 <tr>
-                  <td>method</td>
-                  <td>'getGraph'</td>
+                  <td class="colored">method</td>
+                  <td>'getToken'</td>
                   <td>Name of method</td>
                 </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <table>
+              <thead>
                 <tr>
-                  <td>callback</td>
-                  <td>1</td>
-                  <td>(optional) set callback=1 while using callback-API</td>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">token</td>
+                  <td>string</td>
+                  <td>Token to use in future requests</td>
                 </tr>
               </tbody>
             </table>
 
+            <p>Remember that the Token returned by this method must be modified prior to being used in other methods, according to the rule below:</p>
+            <pre  class="brush: php">
+              token = md5(YOUR_PASSWORD . Token);
+            </pre>
+            <h4>Output parameters:</h4>
+            <p>A general outline of a method-specific json output can be seen below</p>
+            <a href="#" class="button tiny secondary">Show sample output</a>
+            <pre  class="brush: php">
+              {   "Result" : "51b0741a269d56.47938218",
+                  "Error" : [  ]
+              }
+            </pre>
+            <pre  class="brush: php">
+              {   "Result" : "",
+                  "Error" : {
+                      "code" : "101",
+                      "desc" : "Authorization error: Authorization failed"
+                  }
+              }
+            </pre>
+
+
+            <a name="getUserInfo"></a>
+            <hr>
+
+            <kbd class="pull-right">HTTPS</kbd><h3>getUserInfo()</h3>
             <p>
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <a name="getSimplifiedGraph"></a>
-              <br/><br/>
+              This method returns basic user info, like: the last log time, limit reset time, user name, number of used requests, request limit, total request number, server time, user status (active/inactive)
             </p>
-            
-            <h3>getSimplifiedGraph()</h3>
-            <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dign!!!!!!!!!!!!issim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <a name="getFullTable"></a>
-              <br/><br/>
-            </p>
-            <h3>getFullTable()</h3>
-            <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <a name="getFullObject"></a>
-              <br/><br/>
-            <h3>getFullObject()</h3>
-            <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <br/><br/>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>
-            </p>
+            <h4>Requested parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">login</td>
+                  <td>string</td>
+                  <td>User login</td>
+                </tr>
+                <tr>
+                  <td class="colored">passwd</td>
+                  <td>string</td>
+                  <td>User password</td>
+                </tr>
+                <tr>
+                  <td class="colored">method</td>
+                  <td>getUserInfo</td>
+                  <td>Name of method</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">name</td>
+                  <td>string</td>
+                  <td>user name</td>
+                </tr>
+                <tr>
+                  <td class="colored">status</td>
+                  <td>string</td>
+                  <td>active/inactive user status</td>
+                </tr>
+                <tr>
+                  <td class="colored">user_type</td>
+                  <td>string</td>
+                  <td>types: callback/realtime/admin</td>
+                </tr>
+                <tr>
+                  <td class="colored">callback_url</td>
+                  <td>string</td>
+                  <td>your callback adress</td>
+                </tr>
+                <tr>
+                  <td class="colored">callback_is_valid</td>
+                  <td>string</td>
+                  <td>is your callback valid (yes/no)</td>
+                </tr>
+                <tr>
+                  <td class="colored">last_log</td>
+                  <td>datetime</td>
+                  <td>last log time</td>
+                </tr>
+                <tr>
+                  <td class="colored">server_time</td>
+                  <td>datetime</td>
+                  <td>current server time</td>
+                </tr>
+                <tr>
+                  <td class="colored">limit_reset_time</td>
+                  <td>datetime</td>
+                  <td>time of limit reset</td>
+                </tr>
+                <tr>
+                  <td class="colored">hour_request_count</td>
+                  <td>integer</td>
+                  <td>number of used requests in last hour</td>
+                </tr>
+                <tr>
+                  <td class="colored">hour_request_limit</td>
+                  <td>integer</td>
+                  <td>request limit per hour</td>
+                </tr>
+                <tr>
+                  <td class="colored">request_total</td>
+                  <td>integer</td>
+                  <td>total number of requests</td>
+                </tr>
+                <tr>
+                  <td class="colored">request_interval_time</td>
+                  <td>string</td>
+                  <td>interval in miliseconds between two request in realtime API</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <p>A general outline of a method-specific json output can be seen below</p>
+            <a href="#" class="button tiny secondary">Show sample output</a>
+            <pre  class="brush: php">
+              { "Result" : {
+                    "name" : "username",
+                    "status" : "active",
+                    "user_type":"realtime & callback",
+                    "callback_url":"http:\/\/example.com\/callback.php",
+                    "callback_is_valid":"yes",
+                    "last_log" : "2013-06-06 13:35:54",
+                    "server_time":"2013-06-06 14:23:15",
+                    "limit_reset_time" : "2013-06-06 15:00:00",
+                    "hour_request_count":"5",
+                    "hour_request_limit":"100",
+                    "request_total" : "2471",
+                    "request_interval_time":"1000ms"
+                  },
+                "Error" : [  ]
+              }
+            </pre>
+            <p>Description of all fields available in a node Result can be found in <a href="#output">Output Description</a>.</p>
+
+
+            <a name="setCallbackUrl"></a>
+            <hr>
+
+
+            <kbd class="pull-right">HTTPS</kbd><h3>setCallbackUrl()</h3>
+            <p>This method setup and validate your callback url. You need a valid callback adress in order to use callback-API. Copy callback.php (Samples) code on your server, then run setCallbackUrl. On succeed, You will get "verification successfull" in output JSON.</p>
+            <h4>Requested parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">login</td>
+                  <td>string</td>
+                  <td>User login</td>
+                </tr>
+                <tr>
+                  <td class="colored">passwd</td>
+                  <td>string</td>
+                  <td>User password</td>
+                </tr>
+                <tr>
+                  <td class="colored">method</td>
+                  <td>'setCallbackUrl'</td>
+                  <td>Name of method</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <p>A general outline of a method-specific json output can be seen below</p>
+            <a href="#" class="button tiny secondary">Show sample output</a>
+            <pre  class="brush: php">
+              {
+                  "Result":"verification successfull",
+                  "Error":[]
+              }
+            </pre>
+            <hr>
+
+
+
+
+
+            <a name="getSimplifiedGraph"></a>
+            <kbd class="pull-right">HTTP</kbd><h3>getSimplifiedGraph()</h3>
+            <p>This method is used to retrieve basic sentence structure, without punctuation and clause division. The result is a simple json output easily translatable into a graph. The key information extractable includes:</p>
+            <h4>Requested parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">data</td>
+                  <td>string</td>
+                  <td>Text which you wish to decode</td>
+                </tr>
+                <tr>
+                  <td class="colored">token</td>
+                  <td>string</td>
+                  <td>Token returned by getToken method</td>
+                </tr>
+                <tr>
+                  <td class="colored">method</td>
+                  <td>'getSimplifiedGraph'</td>
+                  <td>Name of method</td>
+                </tr>
+                <tr>
+                  <td class="colored">callback</td>
+                  <td>1</td>
+                  <td>Set callback=1 while using callback-API <kbd>optional</kbd></td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <p>A general outline of a method-specific json output can be seen below</p>
+            <a href="#" class="button tiny secondary">Show sample output</a>
+            <pre  class="brush: php">
+              {  "Result" : { "1" : { "aspect" : "position/status",
+                        "base" : "yesterday",
+                        "category" : "time",
+                        "connected_to" : 4,
+                        "phrase" : "yesterday",
+                        "type" : "attribute"
+                      },
+                    "2" : { "aspect" : "purpose/reason",
+                        "base" : "price",
+                        "category" : "extent",
+                        "connected_to" : 4,
+                        "phrase" : "despite the price",
+                        "type" : "attribute"
+                      },
+                    "3" : { "aspect" : "",
+                        "base" : "i",
+                        "category" : "",
+                        "connected_to" : 4,
+                        "phrase" : "i",
+                        "type" : "subject"
+                      },
+                    "4" : { "aspect" : "",
+                        "base" : "buy",
+                        "category" : "",
+                        "connected_to" : 0,
+                        "phrase" : "could have bought",
+                        "type" : "predicate-main"
+                      },
+                    "5" : { "aspect" : "limit/modification",
+                        "base" : "easily",
+                        "category" : "extent",
+                        "connected_to" : 4,
+                        "phrase" : "easily",
+                        "type" : "attribute"
+                      },
+                    "6" : { "aspect" : "",
+                        "base" : "phone",
+                        "category" : "",
+                        "connected_to" : 4,
+                        "phrase" : "this amazing phone",
+                        "type" : "object"
+                      },
+                    "7" : { "aspect" : "",
+                        "base" : "i",
+                        "category" : "",
+                        "connected_to" : 8,
+                        "phrase" : "i",
+                        "type" : "subject"
+                      },
+                    "8" : { "aspect" : "",
+                        "base" : "see",
+                        "category" : "",
+                        "connected_to" : 6,
+                        "phrase" : "'ve seen",
+                        "type" : "predicate-complement"
+                      },
+                    "9" : { "aspect" : "position/status",
+                        "base" : "san jose",
+                        "category" : "place",
+                        "connected_to" : 8,
+                        "phrase" : "in best buy san jose",
+                        "type" : "attribute"
+                      }
+                  },
+                   "Error" : [  ]
+              }
+            </pre>
+            <p>Description of all fields available in a node Result can be found in <a href="#output">Output Description</a>.</p>
+            <p>If you want to see a sample output for this method go to <a href="demo.html">Demo</a> tab.</p>
+            <hr>
+
+
+
+
+            <a name="getGraph"></a>
+            <kbd class="pull-right">HTTP</kbd><h3>getGraph()</h3>
+            <p>This is practically the same output as <a href="#getSimplifiedGraph">getSimplifiedGraph</a>, with the addition of a words field. This field yields more information about individual phrases such as:</p>
+            <div class="large-12 columns">
+              <ul class="square">
+                <li><span class="colored">word_id</span> → position of the word</li>
+                <li><span class="colored">word</span> → the actual word as found in the text</li>
+                <li><span class="colored">word_to_word_connection</span> → shows the connections between words in longer phrases</li>
+                <li><span class="colored">component</span> → specifies the word's role</li>
+              </ul>
+            </div>
+
+
+            <h4>Requested parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">data</td>
+                  <td>string</td>
+                  <td>Text which you wish to decode</td>
+                </tr>
+                <tr>
+                  <td class="colored">token</td>
+                  <td>string</td>
+                  <td>Token returned by getToken method</td>
+                </tr>
+                <tr>
+                  <td class="colored">method</td>
+                  <td>'getGraph'</td>
+                  <td>Name of method</td>
+                </tr>
+                <tr>
+                  <td class="colored">callback</td>
+                  <td>1</td>
+                  <td>Set callback=1 while using callback-API <kbd>optional</kbd></td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <p>A general outline of a method-specific json output can be seen below</p>
+            <a href="#" class="button tiny secondary">Show sample output</a>
+            <pre  class="brush: php">
+              { "Result" : {
+                    "1" : {
+                        "aspect" : "position/status",
+                        "base" : "yesterday",
+                        "category" : "time",
+                        "connected_to" : 4,
+                        "phrase" : "yesterday",
+                        "type" : "attribute",
+                        "words" : { "1" : { "component" : "modifier",
+                                "word" : "yesterday",
+                                "word_to_word_connection" : 0
+                              } }
+                      },
+                    "2" : {
+                        "aspect" : "purpose/reason",
+                        "base" : "price",
+                        "category" : "extent",
+                        "connected_to" : 4,
+                        "phrase" : "despite the price",
+                        "type" : "attribute",
+                        "words" : { "4" : { "component" : "article_definite",
+                                "word" : "the",
+                                "word_to_word_connection" : 5
+                              },
+                            "5" : { "component" : "core",
+                                "word" : "price",
+                                "word_to_word_connection" : 0
+                              }
+                          }
+                      },
+                    "3" : {
+                        "aspect" : "",
+                        "base" : "i",
+                        "category" : "",
+                        "connected_to" : 4,
+                        "phrase" : "i",
+                        "type" : "subject",
+                        "words" : { "6" : { "component" : "core",
+                                "word" : "i",
+                                "word_to_word_connection" : 0
+                              } }
+                      },
+                    "4" : {
+                        "aspect" : "",
+                        "base" : "buy",
+                        "category" : "",
+                        "connected_to" : 0,
+                        "phrase" : "could have bought",
+                        "type" : "predicate-main",
+                        "words" : { "10" : { "component" : "core",
+                                "word" : "bought",
+                                "word_to_word_connection" : 0
+                              },
+                            "7" : { "component" : "modal",
+                                "word" : "could",
+                                "word_to_word_connection" : 10
+                              },
+                            "8" : { "component" : "auxiliary",
+                                "word" : "have",
+                                "word_to_word_connection" : 10
+                              }
+                          }
+                      },
+                    "5" : {
+                        "aspect" : "limit/modification",
+                        "base" : "easily",
+                        "category" : "extent",
+                        "connected_to" : 4,
+                        "phrase" : "easily",
+                        "type" : "attribute",
+                        "words" : { "9" : { "component" : "modifier",
+                                "word" : "easily",
+                                "word_to_word_connection" : 0
+                              } }
+                      },
+                    "6" : {
+                        "aspect" : "",
+                        "base" : "phone",
+                        "category" : "",
+                        "connected_to" : 4,
+                        "phrase" : "this amazing phone",
+                        "type" : "object",
+                        "words" : { "11" : { "component" : "demonstrative",
+                                "word" : "this",
+                                "word_to_word_connection" : 13
+                              },
+                            "12" : { "component" : "qualifier",
+                                "word" : "amazing",
+                                "word_to_word_connection" : 13
+                              },
+                            "13" : { "component" : "core",
+                                "word" : "phone",
+                                "word_to_word_connection" : 0
+                              }
+                          }
+                      },
+                    "7" : {
+                        "aspect" : "",
+                        "base" : "i",
+                        "category" : "",
+                        "connected_to" : 8,
+                        "phrase" : "i",
+                        "type" : "subject",
+                        "words" : { "14" : { "component" : "core",
+                                "word" : "i",
+                                "word_to_word_connection" : 0
+                              } }
+                      },
+                    "8" : {
+                        "aspect" : "",
+                        "base" : "see",
+                        "category" : "",
+                        "connected_to" : 6,
+                        "phrase" : "'ve seen",
+                        "type" : "predicate-complement",
+                        "words" : { "15" : { "component" : "auxiliary",
+                                "word" : "'ve",
+                                "word_to_word_connection" : 16
+                              },
+                            "16" : { "component" : "core",
+                                "word" : "seen",
+                                "word_to_word_connection" : 0
+                              }
+                          }
+                      },
+                    "9" : {
+                        "aspect" : "position/status",
+                        "base" : "San Jose",
+                        "category" : "place",
+                        "connected_to" : 8,
+                        "phrase" : "in best buy san jose",
+                        "type" : "attribute",
+                        "words" : { "18" : { "component" : "specifier",
+                                "word" : "best",
+                                "word_to_word_connection" : 21
+                              },
+                            "19" : { "component" : "specifier",
+                                "word" : "buy",
+                                "word_to_word_connection" : 21
+                              },
+                            "20" : { "component" : "specifier",
+                                "word" : "san",
+                                "word_to_word_connection" : 21
+                              },
+                            "21" : { "component" : "core",
+                                "word" : "jose",
+                                "word_to_word_connection" : 0
+                              }
+                          }
+                      }
+                  },
+                "Error" : [  ]
+              }
+            </pre>
+            <p>Description of all fields available in a node Result can be found in <a href="#output">Output Description</a>.</p>
+            <p>If you want to see a sample output for this method go to <a href="demo.html">Demo</a> tab.</p>
+            <hr>
+
+
+
+
+
+            <a name="getFullObject"></a>
+            <kbd class="pull-right">HTTP</kbd><h3>getFullObject()</h3>
+            <p>This is the same output as <a href="#getGraph">getGraph</a> with the difference, that the result is embedded, which makes operating on the result much easier.</p>
+
+
+            <h4>Requested parameters:</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th width="100">Name</th>
+                  <th>Type</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">data</td>
+                  <td>string</td>
+                  <td>Text which you wish to decode</td>
+                </tr>
+                <tr>
+                  <td class="colored">token</td>
+                  <td>string</td>
+                  <td>Token returned by getToken method</td>
+                </tr>
+                <tr>
+                  <td class="colored">method</td>
+                  <td>'getFullObject'</td>
+                  <td>Name of method</td>
+                </tr>
+                <tr>
+                  <td class="colored">callback</td>
+                  <td>1</td>
+                  <td>Set callback=1 while using callback-API <kbd>optional</kbd></td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Output parameters:</h4>
+            <p>A general outline of a method-specific json output can be seen below</p>
+            <a href="#" class="button tiny secondary">Show sample output</a>
+            <pre  class="brush: php">
+              { "Result" : {
+                    "sentences" : {
+                        "1" : {
+                            "sentence_id" : 1,
+                            "clauses" : {
+                                "1" : {
+                                    "clause_construction" : "positive",
+                                    "clause_id" : 1,
+                                    "clause_tense" : "present perfect",
+                                    "clause_to_clause_connection" : 0,
+                                    "clause_to_phrase_connection" : 0,
+                                    "clause_type" : "main",
+                                    "phrases" : {
+                                        "1" : { "phrase_aspect" : "position/status",
+                                            "phrase_category" : "time",
+                                            "phrase_core_base" : "yesterday",
+                                            "phrase_id" : 1,
+                                            "phrase_to_phrase_connection" : 6,
+                                            "phrase_type" : "attribute",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "modifier",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "yesterday",
+                                                    "word_orig_lex" : "Yesterday",
+                                                    "word_position" : 1,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "2" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : ",",
+                                            "phrase_id" : 2,
+                                            "phrase_to_phrase_connection" : 6,
+                                            "phrase_type" : "irrelevant",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 1,
+                                                    "word_lex" : ",",
+                                                    "word_orig_lex" : ", ",
+                                                    "word_position" : 2,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "3" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "despite",
+                                            "phrase_id" : 3,
+                                            "phrase_to_phrase_connection" : 6,
+                                            "phrase_type" : "preposition",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "despite",
+                                                    "word_orig_lex" : "despite ",
+                                                    "word_position" : 3,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "4" : { "phrase_aspect" : "purpose/reason",
+                                            "phrase_category" : "extent",
+                                            "phrase_core_base" : "price",
+                                            "phrase_id" : 4,
+                                            "phrase_to_phrase_connection" : 3,
+                                            "phrase_type" : "attribute",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "article_definite",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "the",
+                                                    "word_orig_lex" : "the ",
+                                                    "word_position" : 4,
+                                                    "word_to_word_connection" : 2
+                                                  },
+                                                "2" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 2,
+                                                    "word_lex" : "price",
+                                                    "word_orig_lex" : "price ",
+                                                    "word_position" : 5,
+                                                    "word_to_word_connection" : 0
+                                                  }
+                                              }
+                                          },
+                                        "5" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "i",
+                                            "phrase_id" : 5,
+                                            "phrase_to_phrase_connection" : 6,
+                                            "phrase_type" : "subject",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "i",
+                                                    "word_orig_lex" : "I ",
+                                                    "word_position" : 6,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "6" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "buy",
+                                            "phrase_id" : 6,
+                                            "phrase_to_phrase_connection" : 0,
+                                            "phrase_type" : "predicate",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "modal",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "could",
+                                                    "word_orig_lex" : "could ",
+                                                    "word_position" : 7,
+                                                    "word_to_word_connection" : 3
+                                                  },
+                                                "2" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "auxiliary",
+                                                    "word_id" : 2,
+                                                    "word_lex" : "have",
+                                                    "word_orig_lex" : "have ",
+                                                    "word_position" : 8,
+                                                    "word_to_word_connection" : 3
+                                                  },
+                                                "3" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 3,
+                                                    "word_lex" : "bought",
+                                                    "word_orig_lex" : "bought ",
+                                                    "word_position" : 10,
+                                                    "word_to_word_connection" : 0
+                                                  }
+                                              }
+                                          },
+                                        "7" : { "phrase_aspect" : "limit/modification",
+                                            "phrase_category" : "extent",
+                                            "phrase_core_base" : "easily",
+                                            "phrase_id" : 7,
+                                            "phrase_to_phrase_connection" : 6,
+                                            "phrase_type" : "attribute",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "modifier",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "easily",
+                                                    "word_orig_lex" : "easily ",
+                                                    "word_position" : 9,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "8" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "phone",
+                                            "phrase_id" : 8,
+                                            "phrase_to_phrase_connection" : 6,
+                                            "phrase_type" : "object",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "demonstrative",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "this",
+                                                    "word_orig_lex" : "this ",
+                                                    "word_position" : 11,
+                                                    "word_to_word_connection" : 3
+                                                  },
+                                                "2" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "qualifier",
+                                                    "word_id" : 2,
+                                                    "word_lex" : "amazing",
+                                                    "word_orig_lex" : "amazing ",
+                                                    "word_position" : 12,
+                                                    "word_to_word_connection" : 3
+                                                  },
+                                                "3" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 3,
+                                                    "word_lex" : "phone",
+                                                    "word_orig_lex" : "phone ",
+                                                    "word_position" : 13,
+                                                    "word_to_word_connection" : 0
+                                                  }
+                                              }
+                                          }
+                                      }
+                                  },
+                                "2" : { "clause_construction" : "positive",
+                                    "clause_id" : 2,
+                                    "clause_tense" : "present perfect",
+                                    "clause_to_clause_connection" : 1,
+                                    "clause_to_phrase_connection" : 8,
+                                    "clause_type" : "complement",
+                                    "phrases" : {
+                                        "1" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "i",
+                                            "phrase_id" : 1,
+                                            "phrase_to_phrase_connection" : 2,
+                                            "phrase_type" : "subject",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "i",
+                                                    "word_orig_lex" : "I",
+                                                    "word_position" : 14,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "2" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "see",
+                                            "phrase_id" : 2,
+                                            "phrase_to_phrase_connection" : 0,
+                                            "phrase_type" : "predicate",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "auxiliary",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "'ve",
+                                                    "word_orig_lex" : "'ve ",
+                                                    "word_position" : 15,
+                                                    "word_to_word_connection" : 2
+                                                  },
+                                                "2" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 2,
+                                                    "word_lex" : "seen",
+                                                    "word_orig_lex" : "seen ",
+                                                    "word_position" : 16,
+                                                    "word_to_word_connection" : 0
+                                                  }
+                                              }
+                                          },
+                                        "3" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : "in",
+                                            "phrase_id" : 3,
+                                            "phrase_to_phrase_connection" : 2,
+                                            "phrase_type" : "preposition",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "in",
+                                                    "word_orig_lex" : "in ",
+                                                    "word_position" : 17,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          },
+                                        "4" : { "phrase_aspect" : "position/status",
+                                            "phrase_category" : "place",
+                                            "phrase_core_base" : "San Jose",
+                                            "phrase_id" : 4,
+                                            "phrase_to_phrase_connection" : 3,
+                                            "phrase_type" : "attribute",
+                                            "words" : { "1" : { "ner_content" : "best buy",
+                                                    "ner_id" : 1,
+                                                    "ner_type" : "organization",
+                                                    "word_component" : "specifier",
+                                                    "word_id" : 1,
+                                                    "word_lex" : "best",
+                                                    "word_orig_lex" : "best ",
+                                                    "word_position" : 18,
+                                                    "word_to_word_connection" : 4
+                                                  },
+                                                "2" : { "ner_content" : "best buy",
+                                                    "ner_id" : 1,
+                                                    "ner_type" : "organization",
+                                                    "word_component" : "specifier",
+                                                    "word_id" : 2,
+                                                    "word_lex" : "buy",
+                                                    "word_orig_lex" : "buy ",
+                                                    "word_position" : 19,
+                                                    "word_to_word_connection" : 4
+                                                  },
+                                                "3" : { "ner_content" : "San Jose",
+                                                    "ner_id" : 2,
+                                                    "ner_type" : "place",
+                                                    "word_component" : "specifier",
+                                                    "word_id" : 3,
+                                                    "word_lex" : "san",
+                                                    "word_orig_lex" : "San ",
+                                                    "word_position" : 20,
+                                                    "word_to_word_connection" : 4
+                                                  },
+                                                "4" : { "ner_content" : "San Jose",
+                                                    "ner_id" : 2,
+                                                    "ner_type" : "place",
+                                                    "word_component" : "core",
+                                                    "word_id" : 4,
+                                                    "word_lex" : "jose",
+                                                    "word_orig_lex" : "Jose",
+                                                    "word_position" : 21,
+                                                    "word_to_word_connection" : 0
+                                                  }
+                                              }
+                                          },
+                                        "5" : { "phrase_aspect" : "",
+                                            "phrase_category" : "",
+                                            "phrase_core_base" : ".",
+                                            "phrase_id" : 5,
+                                            "phrase_to_phrase_connection" : 2,
+                                            "phrase_type" : "irrelevant",
+                                            "words" : { "1" : { "ner_content" : "",
+                                                    "ner_id" : 0,
+                                                    "ner_type" : "",
+                                                    "word_component" : "core",
+                                                    "word_id" : 1,
+                                                    "word_lex" : ".",
+                                                    "word_orig_lex" : ".",
+                                                    "word_position" : 22,
+                                                    "word_to_word_connection" : 0
+                                                  } }
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "Error" : [  ]
+              }
+            </pre>
+            <p>Description of all fields available in a node Result can be found in <a href="#output">Output Description</a>.</p>
+            <p>If you want to see a sample output for this method go to <a href="demo.html">Demo</a> tab.</p>
+            <hr>
+
+
+
+            <a name="limitations"></a>
+            <h3>Limitations</h3>
+            <div class="large-12 columns">
+              <ul class="square">
+                <li>LanguageDecoder API supports English texts.</li>
+                <li>The maximum length of a text in a single query is 2000 characters.</li>
+                <li>The input text must be encoded in UTF-8.</li>
+                <li>One user can have only one active token at the same time. (Generating a new token will erase the previous one).</li>
+              </ul>
+            </div>
+            <hr>
+
+            <a name="output-description"></a>
+            <h3>Output description</h3>
+            <table class="output-description">
+              <thead>
+                <tr>
+                  <th width="100">Field</th>
+                  <th>options</th>
+                  <th width="250">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="colored">word_position</td>
+                  <td></td>
+                  <td>Position of the word in a sentence.</td>
+                </tr>
+                <tr>
+                  <td class="colored">word_lex</td>
+                  <td></td>
+                  <td>Standardized form of word.</td>
+                </tr>
+                <tr>
+                  <td class="colored">word_orig_lex</td>
+                  <td></td>
+                  <td>Original word as in text.</td>
+                </tr>
+                <tr>
+                  <td rowspan="14" class="colored">word_component</td>
+                  <td>core</td>
+                  <td>Main word of the Phrase (typically the noun, or verb in case of the Predicate), which to a large extent determines its semantic properties such as the Category parameter for the Attribute. Only the Predicate, Preposition, Connector, and Irrelevant must have the core element, while for the other Phrases, it is not necessary.</td>
+                </tr>
+                <tr>
+                  <td>specifier</td>
+                  <td>Further defines the element it refers to (core); namely, it defines the element's objective, referential properties, not dependent on the author's feelings. Specifiers refer to objective properties, or descriptions which have a similar for every human being.</td>
+                </tr>
+                <tr>
+                  <td>qualifier</td>
+                  <td>further defines the element it refers to (core); namely, it defines the element's subjective, referential properties, which depend on the author's feelings. Qualifiers refer to subjective properties, or descriptions which every human being sees and understands differently.  </td>
+                </tr>
+                <tr>
+                  <td>modifier</td>
+                  <td>An adverb or an adjective that amplifies, weakens or further defines the meaning of the word it modifies</td>
+                </tr>
+                <tr>
+                  <td>quantifier_definite</td>
+                  <td>Indicates quantity precisely, typically with numerals.</td>
+                </tr>
+                <tr>
+                  <td>quantifier_indefinite</td>
+                  <td>Indicates quantity imprecisely, typically with indefinite pronouns or determiners.</td>
+                </tr>
+                <tr>
+                  <td>demonstrative</td>
+                  <td>Spans demonstrative pronouns and determiners that typically indicate which entities are being referred to, or help distinguish the entities from others.</td>
+                </tr>
+                <tr>
+                  <td>ordinal</td>
+                  <td>Indicates the order or the position in a series, typically it's an ordinal number, and some adjectives, example: 'last'.</td>
+                </tr>
+                <tr>
+                  <td>possesive</td>
+                  <td>Modifies a noun by attributing possession, or other sense of belonging, to someone or something. It can be expressed by the possessive case, possessive determiner or possessive pronoun.</td>
+                </tr>
+                <tr>
+                  <td>negator</td>
+                  <td>The negative particle 'not' used to form negation, the determiner 'no', and the adverb 'none'.</td>
+                </tr>
+                <tr>
+                  <td>article_definite</td>
+                  <td>The definite article 'the'.</td>
+                </tr>
+                <tr>
+                  <td>article_indefinite</td>
+                  <td>The indefinite article 'a' and 'an'.</td>
+                </tr>
+                <tr>
+                  <td>conjunction</td>
+                  <td>Connects the elements within the Phrase, in most cases, the adjectives in noun phrases.</td>
+                </tr>
+                <tr>
+                  <td>interrogative</td>
+                  <td>Question words</td>
+                </tr>
+                <tr>
+                  <td class="colored">word_ner_id</td>
+                  <td></td>
+                  <td>A number identifying the specific name. Each word which constitutes one specific name has the same value. If the word is not a specific name, then this field has a '0' value.</td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="colored">word_ner_type</td>
+                  <td>person</td>
+                  <td rowspan="5">Specific name type, to which the word, or empty string, belongs to.</td>
+                </tr>
+                <tr>
+                  <td>place</td>
+                </tr>
+                <tr>
+                  <td>e-mail</td>
+                </tr>
+                <tr>
+                  <td>www address</td>
+                </tr>
+                <tr>
+                  <td>organization</td>
+                </tr>
+                <tr>
+                  <td class="colored">word_ner_content</td>
+                  <td></td>
+                  <td>The original form of the specific name, to which a given word, or empty string, belongs to.</td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="docTableList-header">Fields which refer to a phrase, to which a word belongs to.</td>
+                </tr>
+                <tr>
+                  <td rowspan="9" class="colored">phrase_type</td>
+                  <td>predicate</td>
+                  <td>This is the focal point of every clause. It is a master_phrase  and has a master ID = 0, therefore its presence denotes that the clause is fully-fledged as predicates link subjects to other phrases. It can be either a single verb, like: do together with negatives not/n’t, infinitives to and phrasal verb particles, like: come out. Example: to come out, don’t do.</td>
+                </tr>
+                <tr>
+                  <td>subject</td>
+                  <td>These phrases are the second most important master_phrases and are the ‘doers’ of an action. They comprise animate or inanimate things. Example: James, the doctor, a dog, elephants, trees together with ideas like: love, strength etc. </td>
+                </tr>
+                <tr>
+                  <td>object</td>
+                  <td>These phrases are assigned to the predicate and are things on which the predicate acts upon, or exerts influence. Interrogatives and relative pronouns (if transformed to a positive sentence where they function as objects) can take the function of an object. To put in bluntly, objects are what predicates talk about. </td>
+                </tr>
+                <tr>
+                  <td>complement</td>
+                  <td>Complements tell more about subjects or objects. Complements further define subjects through linking verbs (be, feel, taste, look, smell, appear, grow, remain, stay, turn, seem, sound, become, prove), or objects through causative verbs. </td>
+                </tr>
+                <tr>
+                  <td>preposition</td>
+                  <td>These phrases connect the attribute to its master  phrase (or master segment). Prepositions are helpful in  determining the attribute’s category and aspect type</td>
+                </tr>
+                <tr>
+                  <td>attribute</td>
+                  <td>These phrases are the most ‘universal’ out of the rest, as they can define additional properties of any other phrase mentioned here, even attributes themselves, as well as whole clauses. Attributes can be expressed by a prepositional phrase, adverb or noun phrase. As attributes are so wide-ranging, they have two additional parameters: Category and Aspect. Category defines what semantic category the attribute belongs to, while aspect deals with the relation between the attribute and its master phrase.</td>
+                </tr>
+                <tr>
+                  <td>interrogator</td>
+                  <td>These phrases are relative adverbs or pronouns like where, when, how, which together with words which they further define, for example: How much money do you have? </td>
+                </tr>
+                <tr>
+                  <td>connector</td>
+                  <td>These words connect phrases of the same kind  within a clause or ellipsis. Every phrase that a connector joins is assigned to one connector. In cases where there are a few phrases connected, like: ‘John and Julia and  Frank are my friends.’, then John, Julia and Frank are all assigned to the last connector. </td>
+                </tr>
+                <tr>
+                  <td>irrelevant</td>
+                  <td>These phrases have no semantic properties, but syntactic properties which determine the relation to other phrases.</td>
+                </tr>
+                <tr>
+                  <td rowspan="8" class="colored">phrase_category</td>
+                  <td>place</td>
+                  <td>'near the house', 'at the seaside', 'on the beach',</td>
+                </tr>
+                <tr>
+                  <td>time</td>
+                  <td>'last week', 'for three years', 'at midnight'</td>
+                </tr>
+                <tr>
+                  <td>person</td>
+                  <td>'with my friend', 'about Albert Einstein', 'to the doctor'</td>
+                </tr>
+                <tr>
+                  <td>aggregation</td>
+                  <td>'as a whole', 'in the box', 'for the group'</td>
+                </tr>
+                <tr>
+                  <td>extent</td>
+                  <td>'for three miles', 'with sixty bucks', 'as fast'</td>
+                </tr>
+                <tr>
+                  <td>process</td>
+                  <td>'during second world war', 'after a car accident', 'on his journey'</td>
+                </tr>
+                <tr>
+                  <td>entity</td>
+                  <td> 'on my cell phone', 'with a hammer', 'by car'</td>
+                </tr>
+                <tr>
+                  <td>concept</td>
+                  <td>with fear', 'for honor', 'on my free will'</td>
+                </tr>
+                <tr>
+                  <td rowspan="9" class="colored">phrase_aspect</td>
+                  <td>position/status</td>
+                  <td>(found sth) in 1962', '(stay) behind the wall', '(talk) under the bridge',</td>
+                </tr>
+                <tr>
+                  <td>origin/source</td>
+                  <td>(take sth) from my father', '(rent sth) since 2010', '(fall) off the branch'</td>
+                </tr>
+                <tr>
+                  <td>aim/destination</td>
+                  <td>(wait) till midnight', '(put sth) on the table', '(get) inside the house'</td>
+                </tr>
+                <tr>
+                  <td>span/transition</td>
+                  <td>(fight) during the battle', '(wait) for many years', '(buy sth) via the Internet'</td>
+                </tr>
+                <tr>
+                  <td>purpose/reason</td>
+                  <td>'(spy) against the law', '(send sth) at request', '(scream) because of fear'</td>
+                </tr>
+                <tr>
+                  <td>comparison/role</td>
+                  <td>(interrogate sb) as a suspect', '(be as smart) as someone else', '(dance) like John Travolta'</td>
+                </tr>
+                <tr>
+                  <td>essence/property</td>
+                  <td>(buy sth) of chocolate', '(write sth) about knights', '(read sth) by an unknown author'</td>
+                </tr>
+                <tr>
+                  <td>assistant/tool</td>
+                  <td>(travel) by car', '(break sth) with a hammer', '(watch sth) with a girlfriend'</td>
+                </tr>
+                <tr>
+                  <td>limit/modification</td>
+                  <td>(drive) carefully', '(speak)     perfectly', '(agree) totally'</td>
+                </tr>
+                <tr>
+                  <td rowspan="3" class="colored">phrase_core_base</td>
+                  <td>infinitive verb</td>
+                  <td rowspan="3">Base form of core element in phrase.</td>
+                </tr>
+                <tr>
+                  <td>base form of adjective</td>
+                </tr>
+                <tr>
+                  <td>base form of adverb</td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="docTableList-header">Fields which refer to a main sentence, to which a word belongs to.</td>
+                </tr>
+                <tr>
+                  <td rowspan="8" class="colored">clause_type</td>
+                  <td>Node</td>
+                  <td>Nodes carry out a similar task as connectors, but with  the difference that they connect clauses, not phrases.  </td>
+                </tr>
+                <tr>
+                  <td>Main</td>
+                  <td>These are superordinate clauses, either with or without a predicate</td>
+                </tr>
+                <tr>
+                  <td>Subject</td>
+                  <td>This clause acts as a subject of another clause.</td>
+                </tr>
+                <tr>
+                  <td>Object</td>
+                  <td>"This clause acts as an object of another clause. These   clauses refer to the predicate of the previous clause. Object   clauses answer to the question what?  "</td>
+                </tr>
+                <tr>
+                  <td>Attribute</td>
+                  <td>"This clause acts as an attribute of another clause.  These clauses further describe circumstances of events (actions).   Attribute clauses respond to why? or what? Questions and give more    information about other clauses.  "</td>
+                </tr>
+                <tr>
+                  <td>Complement</td>
+                  <td>This clause acts as a complement of another clause.  It modifies the noun, or adverb from the previous clause.</td>
+                </tr>
+                <tr>
+                  <td>Question Tag</td>
+                  <td>This type of clause comprises only question  tags.</td>
+                </tr>
+                <tr>
+                  <td>Addition to Remarks</td>
+                  <td>This type of clause functions as an additional piece of information to the main clause.</td>
+                </tr>
+                <tr>
+                  <td rowspan="12" class="colored">clause_tense</td>
+                  <td>Present/Past/Future Simple</td>
+                  <td>
+                    <a href="http://en.wikipedia.org/wiki/Present_simple" target="_blank">Simple present description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Past_simple" target="_blank">Simple past description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Future_simple#Simple_future" target="_blank">Simple future description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Present/Past/Future Continuous</td>
+                  <td>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Present_progressive" target="_blank">Present Continuous description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Past_progressive" target="_blank">Past Continuous description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Future_progressive" target="_blank">Future Continuous description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Present/Past/Future Perfect</td>
+                  <td>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Present_perfect" target="_blank">Present perfect description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Past_perfect" target="_blank">Past perfect description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Future_perfect" target="_blank">Future perfect description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Present Perfect Continuous</td>
+                  <td>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Present_perfect_progressive" target="_blank">Present Perfect Continuous description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Past_perfect_progressive" target="_blank">Past Perfect Continuous description</a>
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Future_perfect_progressive" target="_blank">Future Perfect Continuous description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Infinitive Continuous</td>
+                  <td>
+                    
+                    
+                          To + be + gerund
+                    
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Gerund" target="_blank">Infinitive Continuous description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Infinitive Perfect Continuous</td>
+                  <td>
+                    
+                    
+                          To + have + been + gerund
+                    
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Gerund" target="_blank">Infinitive Perfect Continuous description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Infinitive Perfect</td>
+                  <td>
+                    
+                    
+                          To + have + past participle
+                    
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#Past_participle" target="_blank">Infinitive Perfect description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Infinitive Simple</td>
+                  <td>
+                    
+                    
+                          To + infinitive
+                    
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/Present_continuous#To-infinitive" target="_blank">Infinitive Simple description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Past Paticiple</td>
+                  <td>
+                    <a href="http://en.wikipedia.org/wiki/English_verbs#Past_participle" target="_blank">Past Paticiple description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Present Participle</td>
+                  <td>
+                    <a href="http://en.wikipedia.org/wiki/Present_participle" target="_blank">Present Participle description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Perfect Participle</td>
+                  <td>
+                    
+                    
+                          Having + past participle
+                    
+                    <br>
+                    <a href="http://en.wikipedia.org/wiki/English_verbs#Past_participle" target="_blank">Perfect Participle description</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Unknown</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td rowspan="6" class="colored">clause_construction</td>
+                  <td>Positive</td>
+                  <td>This is language decoder</td>
+                </tr>
+                <tr>
+                  <td>Negative</td>
+                  <td>This is not language decoder</td>
+                </tr>
+                <tr>
+                  <td>Inverse</td>
+                  <td>Never was this language decoder</td>
+                </tr>
+                <tr>
+                  <td>Imperative</td>
+                  <td>Give me language decoder!</td>
+                </tr>
+                <tr>
+                  <td>Information_Request</td>
+                  <td>Tell me how language decoder works.</td>
+                </tr>
+                <tr>
+                  <td>Question</td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="docTableList-header">Fields which refer to the connections between structure elements.</td>
+                </tr>
+                <tr>
+                  <td class="colored">sentence_id</td>
+                  <td></td>
+                  <td>ID of a complex sentence.</td>
+                </tr>
+                <tr>
+                  <td class="colored">clause_id</td>
+                  <td></td>
+                  <td>ID of a simple sentence (in a complex sentence).</td>
+                </tr>
+                <tr>
+                  <td class="colored">phrase_id</td>
+                  <td></td>
+                  <td>ID of a phrase (in a simple sentence).</td>
+                </tr>
+                <tr>
+                  <td class="colored">word_id</td>
+                  <td></td>
+                  <td>ID of a word (in a phrase).</td>
+                </tr>
+                <tr>
+                  <td class="colored">clause_to_clause_connection</td>
+                  <td></td>
+                  <td>ID of a superordinate sentence, which a given sentence points to (within the complex sentence).</td>
+                </tr>
+                <tr>
+                  <td class="colored">clause_to_phrase_connection</td>
+                  <td></td>
+                  <td>ID of a phrase in a superordinate sentence, which a given sentence points to.</td>
+                </tr>
+                <tr>
+                  <td class="colored">phrase_to_phrase_connection</td>
+                  <td></td>
+                  <td>ID of a phrase in a superordinate sentence, which a given sentence points to.</td>
+                </tr>
+                <tr>
+                  <td class="colored">word_to_word_connection</td>
+                  <td></td>
+                  <td>ID of a superordinate word, which a given word points to (within a phrase).</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
           </div>
         </div>
       </div>
@@ -258,27 +1641,6 @@
           <p class="footer-disclaimer">© 2013 Fido Labs. All rights reserved.</p>
         </div>
       </div>
-
-
-      <!-- Modal section -->
-      <div id="myModal" class="reveal-modal">
-        <h2>Awesome. I have it.</h2>
-        <p class="lead">Your couch.  It is mine.</p>
-        <h3>getFullObject()</h3>
-            <p>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet, auctor vitae velit. Aliquam imperdiet vel erat nec aliquet. Ut eu pulvinar mauris. Praesent non mi ipsum. Quisque ac eros mattis, adipiscing erat id, consectetur felis. Aliquam sem leo, sodales et libero non, sollicitudin euismod risus. Vestibulum at mauris aliquam, molestie leo et, dapibus odio. Suspendisse ultrices iaculis scelerisque. Donec eu aliquam odio, nec fermentum quam. Morbi in pulvinar mauris. Fusce nulla est, placerat ut dolor vel, porta adipiscing augue. Integer sodales nibh quis elit convallis accumsan. Vivamus ac interdum purus. Sed id nibh metus. Aenean quis sollicitudin velit, a consectetur eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              <br/><br/>
-              Fusce cursus tristique quam, vitae suscipit nibh elementum eget. Proin iaculis, turpis at gravida laoreet, ante lectus volutpat elit, et suscipit erat lorem luctus felis. Proin sed nibh varius felis egestas cursus quis non odio. Curabitur semper justo ut felis condimentum hendrerit. Proin vel erat vitae leo convallis hendrerit. Cras diam velit, consequat sit amet nulla sit amet, dignissim faucibus purus. Nam fringilla varius magna a volutpat. Curabitur eros purus, interdum quis feugiat id, consectetur feugiat lectus. Donec laoreet semper mauris, at sodales mauris elementum eget. Cras felis augue, lacinia et est quis, vestibulum lacinia dolor.
-              <br/><br/>
-              Aliquam erat volutpat. Mauris nec tincidunt urna. Nunc malesuada massa urna, sed luctus risus consequat id. Pellentesque mattis mauris in nisl bibendum commodo. Pellentesque sollicitudin consectetur neque, in sollicitudin neque consectetur et. Duis pulvinar arcu diam, nec accumsan neque accumsan sit amet. Aenean blandit ullamcorper felis ac pretium. Quisque quis purus tristique, auctor nibh eget, imperdiet metus. Sed sed luctus odio. Nullam ac mauris sagittis, molestie ligula non, accumsan dolor. Nullam ornare felis vel nibh varius consequat. Aliquam mollis ipsum eu velit dignissim, ac interdum felis porta. Praesent ipsum ipsum, eleifend vel lobortis in, elementum sit amet nisi. Fusce sed dui vel dui tincidunt malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br/><br/>
-              In molestie faucibus augue ac euismod. Pellentesque tempus risus ac neque tempor laoreet. Integer interdum tellus in quam pellentesque posuere. Curabitur pharetra lectus nec leo hendrerit pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eu lectus a erat pulvinar condimentum. Integer ullamcorper ante quis libero ultrices, vel imperdiet quam elementum. Phasellus vestibulum, velit non tincidunt hendrerit, velit felis aliquam dolor, et aliquam tellus lectus eget nunc. Nulla sit amet nunc nec ante tincidunt suscipit a eu urna. Maecenas ac cursus urna. Etiam sodales mauris at erat tempor dapibus. Mauris tincidunt ipsum augue, sed vulputate ipsum tempus ultricies.
-              <br/><br/>
-              Fusce non justo libero. In auctor, nunc eu fermentum consequat, leo dui aliquam turpis, eu rutrum est diam ac lorem. Sed sit amet neque viverra, eleifend mauris at, consequat nulla. Vestibulum dapibus risus nec nibh feugiat commodo. Nullam commodo lacus purus, eget condimentum velit vulputate ac. Curabitur cursus, quam quis condimentum euismod, purus neque molestie diam, non accumsan turpis nisl a diam. Cras porttitor augue vitae rutrum gravida. Vestibulum vel fringilla risus, quis suscipit massa. Suspendisse potenti. Suspendisse tempor magna eu viverra ullamcorper. Suspendisse at aliquet orci. Curabitur ipsum justo, porttitor quis imperdiet et, vestibulum vel lacus.<br/><br/>
-            </p>
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
-
 
       <!-- Final scripts -->
       <div id="fb-root"></div>
@@ -309,5 +1671,12 @@
           g.src='//www.google-analytics.com/ga.js';
           s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>
+
+      <!-- Syntax Highliter -->
+
+      <script type="text/javascript">
+           SyntaxHighlighter.all()
+      </script>
+
     </body>
   </html>

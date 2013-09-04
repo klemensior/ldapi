@@ -15,7 +15,14 @@
       <link rel="stylesheet" href="css/foundation.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="css/shCore.css"/>
+      <link rel="stylesheet" href="css/shThemeDefault.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
       <script src="js/vendor/custom.modernizr.js"></script>
+      <script src="js/shCore.js"></script>
+      <script src="js/shBrushPhp.js"></script>
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -32,7 +39,7 @@
                   <!-- Title Area -->
                   <li class="name">
                     <h1>
-                      <a href="./">
+                      <a href="#">
                         <i class="icon-comments icon-large"></i> Language Decoder API
                       </a>
                     </h1>
@@ -50,15 +57,21 @@
                       <a href="docs.html">Documentation</a>
                     </li>
                     <li>
-                      <a href="cases.html">Samples</a>
+                      <a href="samples.html">Samples</a>
                     </li>
                     <li>
                       <a href="demo.html">Demo</a>
                     </li>
+                    <li>
+                      <a href="stats.html">Statistics</a>
+                    </li>
+                    <li>
+                      <a href="account.html">Account</a>
+                    </li>
                     <li class="has-form">
-                      <a class="button" href="#" data-dropdown="drop">Sign In</a>
+                      <a class="button" href="#" data-dropdown="drop">Sign In</a> <!-- Sign out po zalogowaniu -->
                       <!-- Dropdown -->
-                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999;">
+                      <div index id="drop" class="f-dropdown content" data-dropdown-content style="z-index: 999 !important;">
                         <div class="large-12 columns">
                           <h4>Sign in</h4>
                         </div>
@@ -84,6 +97,7 @@
                           </div>
                         </form>
                       </div>
+
                     </li>
                   </ul>
                 </section>
@@ -119,7 +133,7 @@
         <div class="large-9 columns">
           <div class="row docs-content">
             <h2>Look up your progress</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero enim, facilisis id ullamcorper sit amet.</h4>
+            <h4>Check your query limits and information about the usage of requests, filter it and visualize by date</h4>
             <hr>
             <h3>General statistics</h3>
             <table>
@@ -249,5 +263,12 @@
           s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>
 
+
+      <!-- Syntax Highliter -->
+
+      <script type="text/javascript">
+           SyntaxHighlighter.all()
+      </script>
+      
     </body>
   </html>
